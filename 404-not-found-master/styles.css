@@ -12,9 +12,9 @@ a {
     text-decoration: none;
 }
 img {
-    height: auto;
     display: block;
     max-width: 100%;
+    height: auto;
 }
 .container {
     width: 90%;
@@ -22,19 +22,9 @@ img {
     margin: 0 auto;
     height: 100vh;
 }
-.main {
-    height: 100%;
-    display: flex;
-    
-    flex-grow: 1;
-    justify-content: space-around;
-    align-items: center;
-}
 .main img {
-    max-width: 540px;
-}
-.main__text {
-    width: 30%;
+    max-width: max(50vw,200px);
+    /* max-width: 540px; */
 }
 
 .nav__link {
@@ -55,17 +45,20 @@ footer {
     bottom: 0;
     text-align: center;
 }
-@media (max-width: 475px) {
-    .main {
-        flex-direction: column;
-    }
-    .main__text{
-        width: 100%;
-    }
-    .main img {
-        max-width: 100%;
-    }
-  
+@media (min-width: 775px) {
     
+   
+    .main {
+        height: 100%;
+        display: flex;
+    
+        flex-grow: 1;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    .main__text {
+        width: 30%;
+    }
+
  
 }
