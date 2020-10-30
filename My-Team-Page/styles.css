@@ -1,0 +1,177 @@
+:root {
+    --img1Name: "Bill Mahoney";
+    --img1Position: "Product Owner";
+  
+    --img2Name: "Saba Cabrera";
+    --img2Position: "Art Director";
+  
+    --img3Name: "Shae Le";
+    --img3Position: "Tech Lead";
+  
+    --img4Name: "Skylah Lu";
+    --img4Position: "UX Designer";
+  
+    --img5Name: "Griff Richards";
+    --img5Position: "Developer";
+  
+    --img6Name: "Stan John";
+    --img6Position: "Developer";
+  
+
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    padding: 4em 0;
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+.top__text {
+    width: 50%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+.img:nth-child(3n-1) {
+    margin-top: 100px;
+}
+
+footer {
+    text-align: center;
+    padding: 2em 0;
+}
+.img {
+    position: relative;
+}
+.img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 70px;
+    font-weight: 600;
+}
+.img::after {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    content: '';
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100%;
+    text-transform: uppercase;
+}
+.img:nth-child(3n-1)::before {
+    bottom: -25px;
+}
+
+/* Image 1 */
+.img1::before {
+    content: var(--img1Name);
+}
+.img1::after {
+    content: var(--img1Position);
+}
+
+/* Image 2 */
+.img2::before {
+    content: var(--img2Name);
+}
+.img2::after {
+    content: var(--img2Position);
+}
+
+/* Image 3 */
+.img3::before {
+    content: var(--img3Name);
+}
+.img3::after {
+    content: var(--img3Position);
+}
+
+/* Image 4 */
+.img4::before {
+    content: var(--img4Name);
+}
+.img4::after {
+    content: var(--img4Position);
+}
+
+/* Image 5 */
+.img5::before {
+    content: var(--img5Name);
+}
+.img5::after {
+    content: var(--img5Position);
+}
+
+/* Image 6 */
+.img6::before {
+    content: var(--img6Name);
+}
+.img6::after {
+    content: var(--img6Position);
+}
+
+@media (max-width: 680px) {
+    .top {
+        flex-direction: column;
+    }
+    .top__text {
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    *::before, *::after {
+        font-size: 0.75rem;
+    }
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+    }
+    .img:nth-child(3n-1) {
+        margin-top: 0px;
+    }
+    .img:nth-child(2n) {
+        margin-top: 100px;
+    }
+
+    .img::before {
+        bottom: 70px;
+    }
+
+    .img:nth-child(3n-1)::before {
+        bottom: 70px;
+    }
+
+    .img:nth-child(2n)::before {
+        bottom: -30px;
+    }
+
+}
