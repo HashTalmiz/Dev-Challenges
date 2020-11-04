@@ -50,6 +50,11 @@ img {
     display: flex;
     justify-content: space-between;
 }
+.line {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
 .top__text {
     width: 50%;
 }
