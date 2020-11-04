@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins&display=swap');
+
 :root {
     --img1Name: "Bill Mahoney";
     --img1Position: "Product Owner";
@@ -23,7 +25,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Poppins', sans-serif;
 }
 body {
   margin: 0;
@@ -37,6 +39,9 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+h1,h2,h3 {
+    font-family: 'PT Serif', serif;
 }
 .container {
     padding: 4em 0;
@@ -52,7 +57,7 @@ img {
 }
 .line {
     position: relative;
-    height: 50px;
+    height: 60px;
     overflow: hidden;
 }
 .top__text {

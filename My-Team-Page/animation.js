@@ -4,11 +4,15 @@ const pseudoBottom = CSSRulePlugin.getRule('.img::before')
 const pseudoRight = CSSRulePlugin.getRule('.img::after')
 const pseudoThirdBottom = CSSRulePlugin.getRule('.img:nth-child(3n-1)::before')
 
-timeline.from(".line h2", 1, {
+gsap.from("body", {
+    opacity: 0
+})
+
+timeline.from(".line h1", 1, {
     y: 100,
     ease: "power4.out",
     skewY: 7,
-}).from(".top__text", 1, {
+}).from(".top__text, footer", 1, {
     ease: "power4.out",
     opacity: 0,
     y: 10
@@ -23,6 +27,6 @@ timeline.from(".line h2", 1, {
     left: "0px"
 }, {
     left: "20px"
-}).fromTo(pseudoThirdBottom, {
+}).from(pseudoThirdBottom, {
     bottom: "110px"
 }, "-=1")
