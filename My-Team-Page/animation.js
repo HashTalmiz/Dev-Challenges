@@ -1,11 +1,28 @@
 const timeline = gsap.timeline();
+const pseudoLayer = CSSRulePlugin.getRule('.overlay::before')
+const pseudoBottom = CSSRulePlugin.getRule('.img::before')
+const pseudoRight = CSSRulePlugin.getRule('.img::after')
+const pseudoThirdBottom = CSSRulePlugin.getRule('.img:nth-child(3n-1)::before')
+
 timeline.from(".line h2", 1, {
     y: 100,
     ease: "power4.out",
     skewY: 7,
-    delay: 1
 }).from(".top__text", 1, {
     ease: "power4.out",
     opacity: 0,
     y: 10
-})
+}).to(pseudoLayer, {
+    width: "0%",
+    ease: Power2.easeInOut
+}).fromTo(pseudoBottom, {
+    bottom: "110px",
+}, {
+    bottom: "70px"
+}, "-=.5").fromTo(pseudoRight, {
+    left: "0px"
+}, {
+    left: "20px"
+}).fromTo(pseudoThirdBottom, {
+    bottom: "110px"
+}, "-=1")

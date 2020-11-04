@@ -72,10 +72,23 @@ footer {
     text-align: center;
     padding: 2em 0;
 }
+.overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
 .img {
     position: relative;
+    z-index: 1;
 }
 .img::before {
+    z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
@@ -83,6 +96,7 @@ footer {
     font-weight: 600;
 }
 .img::after {
+    z-index: -1;
     font-family: Georgia, 'Times New Roman', Times, serif;
     content: '';
     writing-mode: vertical-rl;
@@ -156,6 +170,7 @@ footer {
     *::before, *::after {
         font-size: 0.75rem;
     }
+    
     .grid {
         grid-template-columns: repeat(2,1fr);
         gap: 40px;
@@ -167,9 +182,6 @@ footer {
         margin-top: 100px;
     }
 
-    .img::before {
-        bottom: 70px;
-    }
 
     .img:nth-child(3n-1)::before {
         bottom: 70px;
