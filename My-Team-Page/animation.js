@@ -4,8 +4,10 @@ const pseudoBottom = CSSRulePlugin.getRule('.img::before')
 const pseudoRight = CSSRulePlugin.getRule('.img::after')
 const pseudoThirdBottom = CSSRulePlugin.getRule('.img:nth-child(3n-1)::before')
 
-gsap.from("body", {
-    opacity: 0
+gsap.to("body", 0, {
+    css: {
+        visibility: "visible"
+    }
 })
 
 timeline.from(".line h1", 1, {
