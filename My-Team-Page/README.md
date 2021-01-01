@@ -1,11 +1,10 @@
-<!-- Please update value in the {}  -->
-
-<h1 align="center">My Team Page - Animated!</h1>
+<h1 align="center">My Team Page - Animated using GSAP!</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
 </div>
 
+![Alt Text](https://media.giphy.com/media/6Mh2zkVRUWX6kfZozO/giphy.gif)
 <div align="center">
   <h3>
     <a href="https://stoic-dijkstra-d2ae9b.netlify.app">
