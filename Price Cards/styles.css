@@ -1,0 +1,209 @@
+:root {
+   --clr-primary-400: #00a1ab;
+   --clr-primary-500: #3741a0;
+
+   --clr-accent-400: #00cdac;
+   --clr-accent-500: #114243;
+
+   --clr-neutral-100: #fff;
+   --clr-neutral-200: #fafafa;
+   --clr-neutral-300: #e5e3e8;
+   --clr-neutral-400: #4e4e4e;
+}
+/* ///////////////
+  Reset
+  ////////////// */
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* ///////////////
+  General styling
+  ////////////// */
+
+body {
+   font-family: "Roboto", sans-serif;
+   text-align: center;
+}
+
+.section-title {
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   font-weight: 900;
+   margin-top: 3em;
+   margin-bottom: 0;
+   padding-top: 1em;
+   color: #00a1ab;
+}
+
+.fs-500 {
+   font-size: 1.3125rem;
+   margin: 0;
+}
+
+.container {
+   padding: 0 2em;
+   margin: 0 auto;
+   max-width: 1000px;
+}
+
+/* ///////////////
+  Buttons
+  ////////////// */
+
+.button {
+   display: inline-block;
+   text-decoration: none;
+   padding: 0.5em 0.75em;
+   margin: 1em 0;
+   border-radius: 0.25em;
+   text-transform: uppercase;
+   font-weight: 700;
+   background: var(--bg, var(--clr-primary-400));
+   color: var(--txt, var(--clr-neutral-100));
+   /* background: #00a1ab; */
+   /* color: #fff; */
+}
+
+.button--light {
+   background: white;
+   color: #4e4e4e;
+}
+
+.button--dark {
+   color: white;
+   background: #4e4e4e;
+}
+
+/* ///////////////
+  Plans
+  ////////////// */
+
+.plans {
+   display: flex;
+   justify-content: center;
+   margin: 2em 0;
+}
+
+.plan {
+   width: 300px;
+   padding: 4em 2em;
+   border-radius: 1em;
+   margin: 0 0.5em;
+}
+
+.bg--light {
+   --txt: var(--clr-neutral-100);
+   --bg: var(--clr-neutral-400);
+   --pp: var(--clr-primary-400);
+   background: linear-gradient(-45deg, #e5e3e8, #fafafa);
+   color: var(--lol, var(--clr-neutral-400));
+}
+
+/*.bg-light .plan__price {
+   color: #00a1ab;
+} */
+
+/* .bg--light .button {
+   color: white;
+   background: #4e4e4e;
+} */
+
+/* .bg--light .name {
+   color: #00a1ab;
+} */
+
+.bg--accent {
+   --txt: var(--clr-neutral-400);
+   --bg: var(--clr-neutral-100);
+   --pp: var(--clr-neutral-100);
+   color: #fff;
+   background: linear-gradient(-45deg, #00a1ab, #3741a0);
+}
+
+.bg--dark {
+   --txt: var(--clr-neutral-100);
+   --bg: var(--clr-primary-400);
+   --pp: var(--clr-neutral-100);
+
+   color: white;
+   background: #4e4e4e;
+}
+
+/* .bg--accent .button {
+   background: white;
+   color: #4e4e4e;
+} */
+
+.plan__title {
+   text-transform: uppercase;
+   margin: 0 0 1em;
+}
+
+.plan__price {
+   font-size: 3rem;
+   line-height: 1;
+   font-weight: 900;
+   margin: 0;
+   color: var(--pp, red);
+}
+
+.plan__price span {
+   display: block;
+   font-size: 1.5625rem;
+   font-weight: 300;
+}
+
+.plan__description {
+   margin: 2em 0;
+   line-height: 1.5;
+}
+
+/* ///////////////
+  Teams
+  ////////////// */
+
+.team {
+   background: #fafafa;
+}
+
+.team-members {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 2em 0;
+}
+
+.team-member {
+   text-align: left;
+   flex: 1 1 45%;
+   margin: 1em;
+   display: flex;
+   border-radius: 0.5em;
+   align-items: center;
+   padding: 0.5em 2em 0.5em 0.5em;
+   line-height: 1.4;
+}
+
+.team-member img {
+   width: 10rem;
+   border-radius: 0.25em;
+}
+
+.team-member .name {
+   color: var(--pp, var(--clr-neutral-100));
+   font-size: 1.5rem;
+}
+
+.team-member .position {
+   font-weight: 600;
+   font-size: 0.75rem;
+}
+
+.info {
+   padding: 0 2em;
+}
